@@ -4,6 +4,7 @@ body {
   width: 100vw;
   font-family: "Oxygen", sans-serif;
   background-color: rgb(31, 31, 31);
+  overflow: hidden;
 }
 
 .container {
@@ -11,6 +12,47 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
+
+  .content_item {
+    position: absolute;
+    width: 60vw;
+    margin: 2rem;
+    transition: top 2s;
+
+    .content_title {
+      color: rgb(255, 255, 255);
+      font-size: 8rem;
+      font-weight: 700;
+    }
+
+    .content_p {
+      color: white;
+      margin-top: 3rem;
+      font-weight: 0;
+    }
+
+    .img {
+      margin-top: 8rem;
+      margin-left: 6rem;
+      height: 20rem;
+      width: 20rem;
+      background-image: url("img/fusee.png");
+      background-size: cover;
+      filter: invert(100%);
+    }
+  }
+  .home {
+    top: 0%;
+  }
+  .projects {
+    top: 100%;
+  }
+  .about {
+    top: 200%;
+  }
+  .contact {
+    top: 300%;
+  }
 
   .menu_line {
     position: fixed;
@@ -38,9 +80,20 @@ body {
   }
   .selected_title_body {
     color: white;
+    z-index: -2;
     position: absolute;
+    transition: opacity 0.2s, right 1s;
+    right: 0;
+    top: 50%;
+    font-size: 5rem;
+    transform: translate(50%, -50%);
+    text-transform: uppercase;
+    pointer-events: none;
+    letter-spacing: 1rem;
+    font-weight: 700;
   }
   .menu {
+    font-weight: 700;
     position: absolute;
     right: 0;
     display: flex;
@@ -55,7 +108,20 @@ body {
     overflow: hidden;
     white-space: nowrap;
 
+    .selected_title_menu {
+      position: absolute;
+      top: 50%;
+      font-size: 5rem;
+      transition: 0.2s;
+      color: rgba(114, 114, 114, 0.205);
+      transform: translate(-50%, -50%);
+      text-transform: uppercase;
+      pointer-events: none;
+      letter-spacing: 1rem;
+    }
+
     .menu_item {
+      z-index: 10;
       display: flex;
       flex-direction: column;
       text-align: center;

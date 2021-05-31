@@ -4,6 +4,7 @@ body {
   width: 100vw;
   font-family: "Oxygen", sans-serif;
   background-color: #1f1f1f;
+  overflow: hidden;
 }
 
 .container {
@@ -11,6 +12,53 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
+}
+
+.container .content_item {
+  position: absolute;
+  width: 60vw;
+  margin: 2rem;
+  -webkit-transition: top 2s;
+  transition: top 2s;
+}
+
+.container .content_item .content_title {
+  color: white;
+  font-size: 8rem;
+  font-weight: 700;
+}
+
+.container .content_item .content_p {
+  color: white;
+  margin-top: 3rem;
+  font-weight: 0;
+}
+
+.container .content_item .img {
+  margin-top: 8rem;
+  margin-left: 6rem;
+  height: 20rem;
+  width: 20rem;
+  background-image: url("img/fusee.png");
+  background-size: cover;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.container .home {
+  top: 0%;
+}
+
+.container .projects {
+  top: 100%;
+}
+
+.container .about {
+  top: 200%;
+}
+
+.container .contact {
+  top: 300%;
 }
 
 .container .menu_line {
@@ -47,10 +95,23 @@ body {
 
 .container .selected_title_body {
   color: white;
+  z-index: -2;
   position: absolute;
+  -webkit-transition: opacity 0.2s, right 1s;
+  transition: opacity 0.2s, right 1s;
+  right: 0;
+  top: 50%;
+  font-size: 5rem;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  text-transform: uppercase;
+  pointer-events: none;
+  letter-spacing: 1rem;
+  font-weight: 700;
 }
 
 .container .menu {
+  font-weight: 700;
   position: absolute;
   right: 0;
   display: -webkit-box;
@@ -74,7 +135,22 @@ body {
   white-space: nowrap;
 }
 
+.container .menu .selected_title_menu {
+  position: absolute;
+  top: 50%;
+  font-size: 5rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: rgba(114, 114, 114, 0.205);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  pointer-events: none;
+  letter-spacing: 1rem;
+}
+
 .container .menu .menu_item {
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
