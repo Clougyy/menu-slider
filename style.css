@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Oxygen", sans-serif;
+  background-color: #1f1f1f;
+}
+
+.container {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.container .menu_line {
+  position: fixed;
+  background-color: white;
+  right: 0.5rem;
+  width: 0.2rem;
+  height: 50vh;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  border-radius: 50%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-box-shadow: 0px 0px 32px 0px rgba(255, 255, 255, 0.5);
+          box-shadow: 0px 0px 32px 0px rgba(255, 255, 255, 0.5);
+}
+
+.container .menu_line2 {
+  position: fixed;
+  background-color: white;
+  right: 0.9rem;
+  width: 0.2rem;
+  height: 40vh;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  border-radius: 50%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-box-shadow: 0px 0px 32px 0px rgba(255, 255, 255, 0.5);
+          box-shadow: 0px 0px 32px 0px rgba(255, 255, 255, 0.5);
+}
+
+.container .selected_title_body {
+  color: white;
+  position: absolute;
+}
+
+.container .menu {
+  position: absolute;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  width: 0;
+  color: #383838;
+  background-color: lightblue;
+  -webkit-transition: 1s;
+  transition: 1s;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.container .menu .menu_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 3.5rem;
+  margin-top: 1.3rem;
+  margin-bottom: 1.3rem;
+  font-size: 1.3rem;
+  padding: 1rem;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  cursor: pointer;
+  letter-spacing: 0.4rem;
+}
+
+.container .menu .menu_item:hover {
+  color: rgba(255, 255, 255, 0.733);
+  letter-spacing: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.container .menu .item_handler {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+/*# sourceMappingURL=style.css.map */
