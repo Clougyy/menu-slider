@@ -1,4 +1,4 @@
-# Starship 
+# Menu Slider
 ***
 ## Purpose
 No purpose, just a little dumb project that i had in mind.
